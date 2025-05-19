@@ -38,7 +38,7 @@ const Index: React.FC = () => {
   }, []);
 
   return (
-    <main className="w-full overflow-x-hidden">
+    <main className="w-full">
       <Navbar />
       {/* Hero Section */}
       <div>
