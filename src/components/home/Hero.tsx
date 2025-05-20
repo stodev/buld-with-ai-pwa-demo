@@ -17,16 +17,18 @@ const Hero: React.FC = () => {
           muted
           playsInline
           className="absolute w-full h-full object-cover"
-          poster="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/6202d8ef0d56d9ed0bd2af63ee46b5897ce2d3fd"
+          poster="/hero-bgr-poster.jpg"
         >
           <source src="/hero-bgr-video.mp4" type="video/mp4" />
           {/* Fallback image if video fails to load */}
           <img
-            src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/6202d8ef0d56d9ed0bd2af63ee46b5897ce2d3fd"
+            src="/hero-bgr-fallback.jpg"
             alt="Hero Background"
             className="absolute h-full w-full object-cover inset-0"
           />
         </video>
+         {/* Stronger overlay for readability */}
+        <div className="absolute inset-0 bg-black/30 pointer-events-none" />
       </div>
       
       <div className="relative self-stretch flex min-w-60 w-[560px] flex-col items-stretch my-auto z-10">
