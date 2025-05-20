@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
-import { Menu, X } from "lucide-react";
+import { FileBadge, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -100,51 +100,46 @@ const SignupPanel: React.FC<SignupPanelProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <>
-      {/* Fixed Button with rotated text and hamburger/X icon */}
-      <div
-        className={cn(
-          "fixed top-0 z-[1000] transition-transform duration-300",
-          isOpen ? "right-[1px] translate-x-full" : "right-0"
-        )}
-        style={{
-          position: 'fixed',
-          top: '15px'
-        }}
-      >
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="bg-[#52A8AA] p-3 shadow-md flex flex-col items-center justify-center gap-4"
-        >
-          <div className="relative w-6 h-6">
-            <Menu
-              className={cn(
-                "w-6 h-6 text-white absolute transition-all duration-300",
-                isOpen ? "opacity-0 rotate-90" : "opacity-100 rotate-0"
-              )}
-            />
-            <X
-              className={cn(
-                "w-6 h-6 text-white absolute transition-all duration-300",
-                isOpen ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"
-              )}
-            />
-          </div>
-          <div className="rotate-90 origin-center text-white font-medium whitespace-nowrap mt-2">
-            Sign Up
-          </div>
-        </button>
-      </div>
+      
 
       {/* Sliding Panel */}
       <div
         ref={panelRef}
         className={cn(
-          "fixed inset-y-0 right-0 z-[999] h-[90vh] my-auto bg-white shadow-lg transition-transform duration-300 ease-in-out transform",
+          "fixed inset-y-0 right-0 z-[999] h-[90vh] my-auto bg-white shadow-lg rounded-l transition-transform duration-300 ease-in-out transform",
           isOpen ? "translate-x-0" : "translate-x-full",
           "flex flex-col"
         )}
         style={{ width: isMobile ? "calc(100% - 64px)" : `${panelWidth}px` }}
       >
+
+
+        {/* Toggle Button Inside Panel, left edge */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="absolute left-0 top-48 z-[1001] -translate-x-full bg-[#ff9a00] hover:bg-[#ffb84d] p-3 pr-3 hover:pr-5 transition-all duration-300 shadow-md flex flex-col items-center justify-center gap-3"
+          aria-label={isOpen ? "Close Signup Panel" : "Open Signup Panel"}
+        >
+          <div className="relative w-6 h-6">
+            <FileBadge
+              className={cn(
+                "w-6 h-6 text-white absolute transition-all duration-300 delay-300",
+                isOpen ? "opacity-0 rotate-90" : "opacity-100 rotate-0"
+              )}
+            />
+            <ArrowRight
+              className={cn(
+                "w-6 h-6 text-white absolute transition-all duration-300 delay-300",
+                isOpen ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"
+              )}
+            />
+          </div>
+          <div className="text-white font-medium whitespace-nowrap mt-2 [writing-mode:vertical-lr]">
+            Sign Up
+          </div>
+        </button>
+
+
         {/* Panel Content */}
         <div className="flex-1 p-6 overflow-y-auto">
           <h2 className="text-2xl font-semibold text-[#040809] mb-4">Sign Up</h2>
@@ -304,12 +299,14 @@ const SignupPanel: React.FC<SignupPanelProps> = ({ isOpen, setIsOpen }) => {
       </div>
       
       {/* Overlay when panel is open */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-[998]"
+      <div
+          className={cn(
+            "fixed inset-0 bg-black transition-opacity duration-300 z-[998]",
+            isOpen ? "opacity-50 pointer-events-auto" : "opacity-0 pointer-events-none"
+          )}
           onClick={() => setIsOpen(false)}
         />
-      )}
+        
     </>
   );
 };
