@@ -1,4 +1,5 @@
 import React from "react";
+import { ChevronRight } from "lucide-react";
 
 const ConfidentialitySection: React.FC = () => {
   return (
@@ -29,18 +30,14 @@ const ConfidentialitySection: React.FC = () => {
               <span className="text-[#040809] self-stretch my-auto">
                 Sign Up
               </span>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/e52529232037d6ce45824189e743416d71395ed3?placeholderIfAbsent=true"
-                alt="Arrow Right"
-                className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
-              />
+              <ChevronRight className="h-5 w-5" />
             </button>
           </div>
         </div>
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/24f301e77eaf7b66853a3af0d22af883b942757d?placeholderIfAbsent=true"
+          src="/05-content-noteip.jpg"
           alt="Confidentiality Illustration"
-          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full"
+          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full rounded-[30px]"
         />
       </div>
     </div>

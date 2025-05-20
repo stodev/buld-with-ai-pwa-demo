@@ -1,4 +1,5 @@
 import React from "react";
+import { ChevronRight } from "lucide-react";
 
 const CreativitySection: React.FC = () => {
   return (
@@ -51,18 +52,14 @@ const CreativitySection: React.FC = () => {
               <span className="text-white self-stretch my-auto">
                 Learn More
               </span>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/205b3cf0ce27339ae3ef408a2596348387831b71?placeholderIfAbsent=true"
-                alt="Arrow Right"
-                className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
-              />
+              <ChevronRight className="h-5 w-5" />
             </button>
           </div>
         </div>
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/8e7278cf6d57ef42d868fc87b478515e89838d30?placeholderIfAbsent=true"
+          src="/06-content-creativity.jpg"
           alt="Creativity Illustration"
-          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full"
+          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full rounded-[30px]"
         />
       </div>
     </div>

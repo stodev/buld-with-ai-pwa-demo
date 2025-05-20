@@ -1,5 +1,6 @@
 import React from "react";
 import CheckIcon from "../ui/CheckIcon";
+import { ChevronRight } from "lucide-react";
 
 const SubmissionSection: React.FC = () => {
   return (
@@ -59,18 +60,14 @@ const SubmissionSection: React.FC = () => {
               <span className="text-[#040809] self-stretch my-auto">
                 Sign Up
               </span>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/613ddd872a1d54420d3ad9dfa5c40e5f6c1e0067?placeholderIfAbsent=true"
-                alt="Arrow Right"
-                className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
-              />
+              <ChevronRight className="h-5 w-5" />
             </button>
           </div>
         </div>
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/f509b7b70d466e52f685a10f797614f7b7672582?placeholderIfAbsent=true"
+          src="/01-content-submission.jpg"
           alt="Submission Illustration"
-          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full"
+          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full rounded-[30px]"
         />
       </div>
     </div>

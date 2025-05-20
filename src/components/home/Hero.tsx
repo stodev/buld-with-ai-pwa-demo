@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
       <div className="relative self-stretch flex min-w-60 w-[560px] flex-col items-stretch my-auto z-10">
         <div className="w-full text-lg text-white font-normal leading-[27px] max-md:max-w-full">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/6d72a78c408ba3c2da820ab7790a467668c13dbc"
+            src="/build-with-ai-sign.svg"
             alt="Hackathon Logo"
             className="aspect-[0.75] object-contain w-[274px] max-w-full animate-fade-in"
           />

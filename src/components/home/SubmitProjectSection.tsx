@@ -1,4 +1,5 @@
 import React from "react";
+import { ChevronRight } from "lucide-react";
 
 const SubmitProjectSection: React.FC = () => {
   return (
@@ -25,18 +26,14 @@ const SubmitProjectSection: React.FC = () => {
               <span className="text-[#040809] self-stretch my-auto">
                 Learn More
               </span>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/613ddd872a1d54420d3ad9dfa5c40e5f6c1e0067?placeholderIfAbsent=true"
-                alt="Arrow Right"
-                className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
-              />
+              <ChevronRight className="h-5 w-5" />
             </button>
           </div>
         </div>
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/3572875969e362a21605ce671959709fb42ea9b5?placeholderIfAbsent=true"
+          src="/02-content-submit.jpg"
           alt="Submit Project Illustration"
-          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full"
+          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full rounded-[30px]"
         />
       </div>
     </div>

@@ -16,9 +16,9 @@ const EvaluationSection: React.FC = () => {
           </p>
         </div>
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/48613a20d5a972a3aea3cd0453c57930d82e5546?placeholderIfAbsent=true"
+          src="/04-content-criteria.jpg"
           alt="Evaluation Criteria Illustration"
-          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full"
+          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full rounded-[30px]"
         />
       </div>
     </div>
