@@ -1,7 +1,12 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
+import { useLearnMoreModal } from "@/contexts/LearnMoreContext";
+import { useSignupPanel } from "@/contexts/SignupPanelContext";
 
 const CreativitySection: React.FC = () => {
+  const { openModal } = useLearnMoreModal();
+  const { setIsOpen } = useSignupPanel();
+
   return (
     <section className="homepage-section bg-[#52A8AA]">
       <div className="section-columns">
@@ -22,8 +27,8 @@ const CreativitySection: React.FC = () => {
             </div>
           </div>
           <div className="section-actions">
-            <button className="section-btn inverted-btn inverted-btn--white">Submit</button>
-            <button className="section-btn inverted-btn">
+            <button className="section-btn inverted-btn inverted-btn--white" onClick={() => setIsOpen(true)}>Submit</button>
+            <button className="section-btn inverted-btn" onClick={openModal}>
               <span>Learn More</span>
               <ChevronRight className="h-5 w-5" />
             </button>

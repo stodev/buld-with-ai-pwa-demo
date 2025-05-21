@@ -1,8 +1,13 @@
 import React from "react";
 import CheckIcon from "../ui/CheckIcon";
 import { ChevronRight } from "lucide-react";
+import { useLearnMoreModal } from "@/contexts/LearnMoreContext";
+import { useSignupPanel } from "@/contexts/SignupPanelContext";
 
 const SubmissionSection: React.FC = () => {
+  const { openModal } = useLearnMoreModal();
+  const { setIsOpen } = useSignupPanel();
+
   return (
     <section className="homepage-section bg-white">
       <div className="section-columns">
@@ -19,8 +24,8 @@ const SubmissionSection: React.FC = () => {
             <div className="section-list-item"><CheckIcon />Live deployment URL</div>
           </div>
           <div className="section-actions">
-            <button className="section-btn section-btn--white">Learn More</button>
-            <button className="section-btn">
+            <button className="section-btn section-btn--white" onClick={openModal}>Learn More</button>
+            <button className="section-btn" onClick={() => setIsOpen(true)}>
               <span>Sign Up</span>
               <ChevronRight className="h-5 w-5" />
             </button>

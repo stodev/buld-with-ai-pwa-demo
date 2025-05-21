@@ -1,7 +1,12 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
+import { useLearnMoreModal } from "@/contexts/LearnMoreContext";
+import { useSignupPanel } from "@/contexts/SignupPanelContext";
 
 const SubmitProjectSection: React.FC = () => {
+  const { openModal } = useLearnMoreModal();
+  const { setIsOpen } = useSignupPanel();
+
   return (
     <section className="homepage-section bg-[#EDF6F6]" id="submit">
       <div className="section-columns">
@@ -11,8 +16,8 @@ const SubmitProjectSection: React.FC = () => {
             Make sure to include your unique submission ID in all filenames to ensure proper tracking and organization.
           </div>
           <div className="section-actions">
-            <button className="section-btn section-btn--white">Upload</button>
-            <button className="section-btn">
+            <button className="section-btn section-btn--white" onClick={() => setIsOpen(true)}>Upload</button>
+            <button className="section-btn" onClick={openModal}>
               <span>Learn More</span>
               <ChevronRight className="h-5 w-5" />
             </button>
