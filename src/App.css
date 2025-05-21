@@ -215,16 +215,12 @@
 /* Homepage Section Layout */
 .homepage-section {
   width: 100%;
-  padding: 7rem 4rem;
+  padding: 7rem var(--site-x-padding);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-@media (max-width: 1024px) {
-  .homepage-section {
-    padding: 6.25rem 1.25rem;
-  }
-}
+
 
 .section-columns {
   display: flex;
@@ -621,7 +617,9 @@
 .navbar {
   min-height: var(--navbar-height, 72px);
   background-color: var(--site-bgr);
-  @apply sticky top-0 z-[100] justify-center items-stretch flex w-full flex-col px-16 max-md:max-w-full max-md:px-5;
+  padding-left: var(--site-x-padding);
+  padding-right: var(--site-x-padding);
+  @apply sticky top-0 z-[100] justify-center items-stretch flex w-full flex-col max-md:max-w-full max-md:px-5;
 }
 .navbar-links .selected, .navbar-mobile .selected {
   color: #52A8AA !important;
@@ -658,3 +656,10 @@
     box-sizing: border-box;
   }
 }
+
+
+/**/
+.site-footer {
+  padding-inline: var(--site-x-padding);
+}
+

@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="w-full overflow-hidden bg-[#204344] px-16 py-20 max-md:max-w-full max-md:px-5">
+    <footer className="site-footer w-full overflow-hidden bg-[#204344] py-20 max-md:max-w-full max-md:px-5">
       <div className="flex min-h-[248px] w-full gap-[40px_200px] flex-wrap max-md:max-w-full">
         <div className="min-w-60 w-[500px] max-md:max-w-full">
           <div className="bg-[rgba(2,37,38,1)] w-56 max-w-full pt-[15px] pb-5 px-5 rounded-[3px]">

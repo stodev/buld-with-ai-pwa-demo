@@ -9,6 +9,10 @@
     --accent-color: #52a8aa;
     --accent-color-hover: #286667;
 
+    --hero-intro-fill: #fff;
+
+    --site-x-padding: 8rem;
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -56,6 +60,16 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     --navbar-height: 72px; /* default value, will be overwritten from a js calculation in "src/lib/navbarParallax.js" */
+  }
+  @media (max-width: 1800px) {
+    :root {
+        --site-x-padding: 6rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    :root {
+        --site-x-padding: 2rem;
+    }
   }
 
   .dark {
@@ -105,5 +119,6 @@
   body {
     @apply bg-background text-foreground;
     color: var(--main-text);
+    scroll-behavior: smooth;
   }
 }
