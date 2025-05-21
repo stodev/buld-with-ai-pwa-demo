@@ -1,27 +1,70 @@
 import React from "react";
+import { Sparkles, Code2, Globe2 } from "lucide-react";
+
+const criteria = [
+  {
+    title: "Creativity",
+    desc: "How original and innovative is your project?",
+    icon: (
+      <span className="criteria-icon-bg" style={{ background: "#52A8AA" }}>
+        <Sparkles className="criteria-icon" />
+      </span>
+    )
+  },
+  {
+    title: "Technical Excellence",
+    desc: "How well does your project demonstrate technical skill and problem-solving?",
+    icon: (
+      <span className="criteria-icon-bg" style={{ background: "#F3B63A" }}>
+        <Code2 className="criteria-icon" />
+      </span>
+    )
+  },
+  {
+    title: "Impact",
+    desc: "What is the potential for real-world impact?",
+    icon: (
+      <span className="criteria-icon-bg" style={{ background: "#6C63FF" }}>
+        <Globe2 className="criteria-icon" />
+      </span>
+    )
+  }
+];
 
 const EvaluationSection: React.FC = () => {
   return (
-    <div className="items-stretch flex w-full flex-col overflow-hidden text-[#040809] font-normal justify-center bg-white px-16 py-28 max-md:max-w-full max-md:px-5 max-md:py-[100px]">
-      <div className="flex w-full items-center gap-[40px_80px] flex-wrap max-md:max-w-full">
-        <div className="self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full">
-          <h2 className="text-[#040809] text-[40px] leading-[48px] tracking-[-0.4px] max-md:max-w-full">
-            Evaluation Criteria for Your AI Hackathon Project Submission
-          </h2>
-          <p className="text-[#040809] text-lg leading-[27px] mt-6 max-md:max-w-full">
-            Each project will be assessed based on five key areas, ensuring
-            a comprehensive evaluation. Focus on originality, impact,
-            quality, technical execution, and alignment with AI goals to
-            maximize your chances of success.
-          </p>
+    <section className="homepage-section bg-white" id="evaluation">
+      <div className="section-columns">
+        <div className="text-column-wrap text-[#040809]">
+          <div className="section-label">Evaluation</div>
+          <div className="section-title">How Projects Are Judged</div>
+          <div className="section-desc">
+            Our panel of experts will evaluate submissions based on the following criteria:
+          </div>
+          <div className="criteria-timeline">
+            {criteria.map((item, i) => (
+              <div className="criteria-step" key={i}>
+                <div className="criteria-step-icon-wrap">
+                  {item.icon}
+                  {i < criteria.length - 1 && <div className="criteria-step-line" />}
+                </div>
+                <div>
+                  <div className="criteria-title">{item.title}</div>
+                  <div className="criteria-desc">{item.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <img
-          src="/04-content-criteria.jpg"
-          alt="Evaluation Criteria Illustration"
-          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full rounded-[30px]"
-        />
+        <div className="image-column-wrap">
+          <img
+            src="/04-content-criteria.jpg"
+            alt="Evaluation"
+            className="section-image"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

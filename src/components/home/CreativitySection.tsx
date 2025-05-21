@@ -3,66 +3,41 @@ import { ChevronRight } from "lucide-react";
 
 const CreativitySection: React.FC = () => {
   return (
-    <div className="items-stretch flex w-full flex-col overflow-hidden justify-center bg-[#52A8AA] px-16 py-28 max-md:max-w-full max-md:px-5 max-md:py-[100px]">
-      <div className="flex w-full items-center gap-[40px_80px] flex-wrap max-md:max-w-full">
-        <div className="self-stretch flex min-w-60 flex-col items-stretch flex-1 shrink basis-[0%] my-auto max-md:max-w-full">
-          <div className="w-full text-white max-md:max-w-full">
-            <div className="flex w-full flex-col items-stretch max-md:max-w-full">
-              <div className="text-white text-base font-semibold whitespace-nowrap">
-                Welcome
-              </div>
-              <div className="w-full font-normal mt-4 max-md:max-w-full">
-                <h2 className="text-white text-5xl leading-[58px] tracking-[-0.48px] max-md:max-w-full max-md:text-[40px] max-md:leading-[54px]">
-                  Unleash Your Creativity with AI
-                </h2>
-                <p className="text-white text-lg leading-[27px] mt-6 max-md:max-w-full">
-                  We're eager to witness your innovative projects and how
-                  you utilize AI tools. Reach out for any support you may
-                  need!
-                </p>
-              </div>
+    <section className="homepage-section bg-[#52A8AA]">
+      <div className="section-columns">
+        <div className="text-column-wrap text-white">
+          <div className="section-label">Welcome</div>
+          <div className="section-title">Unleash Your Creativity with AI</div>
+          <p className="section-desc">
+            We're eager to witness your innovative projects and how you utilize AI tools. Reach out for any support you may need!
+          </p>
+          <div className="section-sub-columns">
+            <div className="section-sub-col">
+              <h3 className="section-sub-title">Need Help?</h3>
+              <p className="section-sub-desc">Contact your technical leaders for guidance and assistance.</p>
             </div>
-            <div className="w-full font-normal mt-8 max-md:max-w-full">
-              <div className="flex w-full gap-6 flex-wrap py-2 max-md:max-w-full">
-                <div className="min-w-60 flex-1 shrink basis-[0%]">
-                  <h3 className="text-white text-xl leading-[1.4] tracking-[-0.2px]">
-                    Need Help?
-                  </h3>
-                  <p className="text-white text-base leading-6 mt-4">
-                    Contact your technical leaders for guidance and
-                    assistance.
-                  </p>
-                </div>
-                <div className="min-w-60 flex-1 shrink basis-[0%]">
-                  <h3 className="text-white text-xl leading-[1.4] tracking-[-0.2px]">
-                    Good Luck
-                  </h3>
-                  <p className="text-white text-base mt-4">
-                    We wish you the best in your AI journey.
-                  </p>
-                </div>
-              </div>
+            <div className="section-sub-col">
+              <h3 className="section-sub-title">Good Luck</h3>
+              <p className="section-sub-desc">We wish you the best in your AI journey.</p>
             </div>
           </div>
-          <div className="flex items-center gap-6 text-base text-white font-medium mt-8">
-            <button className="text-white self-stretch border-[color:var(--Color-White,#FFF)] gap-2 overflow-hidden whitespace-nowrap my-auto px-3 py-1.5 border-2 border-solid">
-              Submit
-            </button>
-            <button className="self-stretch flex items-center gap-2 overflow-hidden justify-center my-auto">
-              <span className="text-white self-stretch my-auto">
-                Learn More
-              </span>
+          <div className="section-actions">
+            <button className="section-btn creativity-btn creativity-btn--white">Submit</button>
+            <button className="section-btn creativity-btn">
+              <span>Learn More</span>
               <ChevronRight className="h-5 w-5" />
             </button>
           </div>
         </div>
-        <img
-          src="/06-content-creativity.jpg"
-          alt="Creativity Illustration"
-          className="aspect-[0.96] object-contain w-full self-stretch min-w-60 flex-1 shrink basis-[0%] my-auto max-md:max-w-full rounded-[30px]"
-        />
+        <div className="image-column-wrap">
+          <img
+            src="/06-content-creativity.jpg"
+            alt="Creativity Illustration"
+            className="section-image"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
