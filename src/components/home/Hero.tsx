@@ -45,18 +45,18 @@ const Hero: React.FC = () => {
           </div>
         </div>
         <div className="flex gap-4 text-base font-medium mt-[50px] max-md:mt-10 animate-fade-in" style={{ animationDelay: "400ms" }}>
-          <button 
-            className="self-stretch border border-[color:var(--Color-White,#FFF)] bg-white min-h-10 gap-2 text-[#040809] w-[118px] px-3 py-2 border-solid hover:bg-gray-100 transition-colors transform hover:scale-105"
-            onClick={() => openModal()}
-          >
-            Learn More
-          </button>
-          <button 
-            className="self-stretch border-[color:var(--Color-White,#FFF)] min-h-10 gap-2 text-white w-[91px] px-3 py-2 border-2 border-solid hover:bg-white hover:bg-opacity-10 transition-colors transform hover:scale-105"
+          <button
+            className="section-btn inverted-btn inverted-btn--white-filled"
             onClick={() => setIsOpen(true)}
           >
             Sign Up
           </button>
+          <button
+            className="section-btn inverted-btn section-btn--accent"
+            onClick={() => openModal()}
+          >
+            Learn More
+          </button>          
         </div>
       </div>
     </div>

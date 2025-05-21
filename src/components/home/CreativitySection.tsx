@@ -22,8 +22,8 @@ const CreativitySection: React.FC = () => {
             </div>
           </div>
           <div className="section-actions">
-            <button className="section-btn creativity-btn creativity-btn--white">Submit</button>
-            <button className="section-btn creativity-btn">
+            <button className="section-btn inverted-btn inverted-btn--white">Submit</button>
+            <button className="section-btn inverted-btn">
               <span>Learn More</span>
               <ChevronRight className="h-5 w-5" />
             </button>

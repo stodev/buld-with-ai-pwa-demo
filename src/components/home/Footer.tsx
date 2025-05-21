@@ -17,11 +17,13 @@ const Footer: React.FC = () => {
       <div className="flex min-h-[248px] w-full gap-[40px_200px] flex-wrap max-md:max-w-full">
         <div className="min-w-60 w-[500px] max-md:max-w-full">
           <div className="bg-[rgba(2,37,38,1)] w-56 max-w-full pt-[15px] pb-5 px-5 rounded-[3px]">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/395d17b89dfe4ee36f6f8c1b69fd123d289d42fb?placeholderIfAbsent=true"
-              alt="Footer Logo"
-              className="aspect-[4] object-contain w-full"
-            />
+            <Link to="/" className="w-full flex-1 pb-[7px]">
+              <img
+                src="/site-logo-inverted.svg"
+                alt="Footer Company Logo"
+                className="aspect-[4] object-contain w-full"
+              />
+            </Link>
           </div>
           <p className="text-white text-base font-normal mt-[26px] max-md:max-w-full">
             Subscribe to our newsletter for the latest features and updates.

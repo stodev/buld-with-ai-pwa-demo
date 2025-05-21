@@ -4,6 +4,11 @@
 
 @layer base {
   :root {
+    --site-bgr: #fff;
+    --main-text: #040809;
+    --accent-color: #52a8aa;
+    --accent-color-hover: #286667;
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -99,5 +104,6 @@
 
   body {
     @apply bg-background text-foreground;
+    color: var(--main-text);
   }
 }

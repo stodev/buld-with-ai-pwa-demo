@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="navbar sticky top-0 z-[100] w-full min-h-[72px] bg-white px-16 flex flex-col justify-center items-stretch">
+    <nav className="navbar">
       <div className="navbar-inner flex w-full items-center justify-between flex-wrap">
         <div className="navbar-logo flex items-center justify-center w-[185px] my-auto">
           <Link to="/" className="w-full flex-1 pb-[7px]">
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
               Sign Up
             </button>
             <button 
-              className="section-btn"
+              className="section-btn section-btn--accent"
               onClick={handleLearnMoreClick}
             >
               Learn More
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
                   Sign Up
                 </button>
                 <button 
-                  className="section-btn flex-1"
+                  className="section-btn section-btn--accent flex-1"
                   onClick={() => { setIsMenuOpen(false); openModal(); }}
                 >
                   Learn More

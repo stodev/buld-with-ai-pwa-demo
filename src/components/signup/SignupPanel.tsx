@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { FileBadge, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -249,17 +248,19 @@ const SignupPanel: React.FC<SignupPanelProps> = ({ isOpen, setIsOpen }) => {
               
               {/* Form Buttons */}
               <div className="flex gap-4 pt-2">
-                <Button type="submit" className="bg-[#52A8AA] hover:bg-[#3A8A8C] transition-colors">
+                <button
+                  type="submit"
+                  className="section-btn section-btn--white"
+                >
                   Submit
-                </Button>
-                <Button 
-                  type="button" 
-                  onClick={handleClear} 
-                  variant="outline"
-                  className="hover:bg-gray-100 transition-colors"
+                </button>
+                <button
+                  type="button"
+                  onClick={handleClear}
+                  className="section-btn"
                 >
                   Clear
-                </Button>
+                </button>
               </div>
             </form>
           )}
