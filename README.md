@@ -2,14 +2,14 @@
 
 ## 1. Project Overview
 
-This project was created as a demo website for an **Internal Hackathon Week**. The concept was developed entirely from scratch – not by modifying an existing template, but by leveraging a wide range of **AI tools** at each stage of the creative and development process. The initiative was led by a **designer with native HTML/CSS front-end experience**, aiming to demonstrate how **non-technical team members** or **backend developers with limited frontend knowledge** can still create **fully functional PWA web apps** using modern AI tooling.
+This project was created as a demo website for an **Internal Hackathon Week**. The concept was developed entirely from scratch – not by modifying an existing template, but by leveraging a wide range of **AI tools** at each stage of the creative and development process. The initiative was led by a **web designer with native HTML/CSS front-end experience**, aiming to demonstrate how **non-technical team members** or **backend developers with limited frontend knowledge** can still create **fully functional PWA web apps** using modern AI tooling.
 
 The objective was to simulate a **full-stack experience**: from a simple email brief for an internal event, to a working product with a dynamic UI and core interactions.
 
 ## 2. Key Demo Highlights
 
 - **No pre-made templates were used.** The entire site was built from scratch using AI-assisted tools at every step of the pipeline.
-- **Full-stack simulation**: From concept and structure to layout, interactivity, and deployment – all done by a non-frontend specialist.
+- **Full-stack simulation**: From concept and structure to layout, interactivity, and deployment.
 - **AI-assisted design system**: Sitemap, wireframes, and style guidelines generated in **Relume**, refined in **Figma**, and translated into interactive prototypes in **Builder.io**.
 - **Responsive layout with modern UI elements**:
   - A **resizable sidebar panel** that maintains state in **localStorage** and supports **swipe gestures on mobile**.
