@@ -18,12 +18,12 @@ const Hero: React.FC = () => {
           muted
           playsInline
           className="absolute w-full h-full object-cover"
-          poster="/hero-bgr-poster.jpg"
+          poster="/hero-bgr-video.jpg"
         >
           <source src="/hero-bgr-video.mp4" type="video/mp4" />
           {/* Fallback image if video fails to load */}
           <img
-            src="/hero-bgr-fallback.jpg"
+            src="/hero-bgr-video.jpg"
             alt="Hero Background"
             className="absolute h-full w-full object-cover inset-0"
           />
