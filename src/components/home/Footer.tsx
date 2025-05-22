@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Facebook, Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
 
 const Footer: React.FC = () => {
   const [email, setEmail] = React.useState("");
@@ -79,51 +80,31 @@ const Footer: React.FC = () => {
             </h3>
             <div className="w-full text-sm font-normal mt-4">
               <a href="#" className="flex w-full items-center gap-3 py-2">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/9f358c373ac2d3f61f3f503f8bae60cff0ca78e3?placeholderIfAbsent=true"
-                  alt="Facebook Icon"
-                  className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
-                />
+                <Facebook className="w-6 h-6 text-white" aria-label="Facebook Icon" />
                 <span className="text-white self-stretch my-auto">
                   Hackathon Facebook
                 </span>
               </a>
               <a href="#" className="flex w-full items-center gap-3 whitespace-nowrap py-2">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/57003d11c4abff68ae2689a50e587ea9bda49c30?placeholderIfAbsent=true"
-                  alt="Instagram Icon"
-                  className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
-                />
+                <Instagram className="w-6 h-6 text-white" aria-label="Instagram Icon" />
                 <span className="text-white self-stretch my-auto">
                   Instagram
                 </span>
               </a>
               <a href="#" className="flex w-full items-center gap-3 whitespace-nowrap py-2">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/a8b24466984496efe3e4fff24e866993d746fb4d?placeholderIfAbsent=true"
-                  alt="X Icon"
-                  className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
-                />
+                <Twitter className="w-6 h-6 text-white" aria-label="X Icon" />
                 <span className="text-white self-stretch my-auto">
                   X
                 </span>
               </a>
               <a href="#" className="flex w-full items-center gap-3 whitespace-nowrap py-2">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/94857c298576d8f41e0078478eac2165d7af0a46?placeholderIfAbsent=true"
-                  alt="LinkedIn Icon"
-                  className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
-                />
+                <Linkedin className="w-6 h-6 text-white" aria-label="LinkedIn Icon" />
                 <span className="text-white self-stretch my-auto">
                   LinkedIn
                 </span>
               </a>
               <a href="#" className="flex w-full items-center gap-3 py-2">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/6684d7353aa94725ab1f51960a0c7d00/f7dae7da79109df464059810a487c3ed56a5174b?placeholderIfAbsent=true"
-                  alt="YouTube Icon"
-                  className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
-                />
+                <Youtube className="w-6 h-6 text-white" aria-label="YouTube Icon" />
                 <span className="text-white self-stretch my-auto">
                   You Tube
                 </span>
