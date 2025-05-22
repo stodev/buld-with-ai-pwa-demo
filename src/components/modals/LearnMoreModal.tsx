@@ -60,7 +60,7 @@ const LearnMoreModal: React.FC<LearnMoreModalProps> = ({ isOpen, onClose }) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
         ref={modalRef}
-        className="bg-white p-0 overflow-hidden shadow-lg rounded-lg max-w-2xl w-full animate-slide-in-bottom border border-gray-200 z-[2000]"
+        className="bg-white p-0 overflow-hidden shadow-lg rounded-lg max-w-2xl w-full animate-slide-in-bottom border border-gray-200"
         style={{
           left: `calc(50% + ${position.x}px)`,
           top: `calc(50% + ${position.y}px)`,
@@ -68,7 +68,6 @@ const LearnMoreModal: React.FC<LearnMoreModalProps> = ({ isOpen, onClose }) => {
           cursor: isDragging ? "grabbing" : "auto",
           transition: isDragging ? "none" : "box-shadow 0.3s, left 0.3s, top 0.3s",
           position: "fixed",
-          zIndex: 2000,
         }}
       >
         <DialogHeader
