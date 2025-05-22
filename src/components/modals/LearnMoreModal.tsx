@@ -85,9 +85,8 @@ const LearnMoreModal: React.FC<LearnMoreModalProps> = ({ isOpen, onClose }) => {
           <DialogDescription className="text-base text-[--text-cold-dark]">            
               <div className="space-y-7">
                 <p className="leading-relaxed">
-                  This site was built as part of an <strong>AI Hackathon demo</strong> to show how a
-                  <strong> non-frontend specialist</strong> – like a designer or backend developer – can create a
-                  fully working PWA using <strong>modern AI tools</strong>.
+                  This site was built as part of an <strong>AI Hackathon demo</strong> to show how a <strong>specialist with limited full-stack experience</strong> – like a web designer or native frontend developer – 
+                  can create a fully working PWA using <strong>modern AI tools</strong>.
                 </p>
                 <p className="leading-relaxed">
                   Instead of using a ready-made template, the entire site was created <strong>from scratch</strong>,
