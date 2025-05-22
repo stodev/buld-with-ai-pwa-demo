@@ -9,6 +9,69 @@ interface SignupPanelProps {
   setIsOpen: (isOpen: boolean) => void;
 }
 
+// Touch/swipe logic for panel open/close
+const useSwipePanel = (isOpen: boolean, setIsOpen: (open: boolean) => void, panelRef: React.RefObject<HTMLDivElement>) => {
+  useEffect(() => {
+    let startX: number | null = null;
+    let startY: number | null = null;
+    let isSwiping = false;
+    let touchMoved = false;
+
+    // Swipe to close (right swipe on panel)
+    const handleTouchStart = (e: TouchEvent) => {
+      // Only allow open from right edge
+      if (!isOpen && e.touches[0].clientX < window.innerWidth - 40) return;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      isSwiping = true;
+      touchMoved = false;
+    };
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isSwiping || startX === null || startY === null) return;
+      const dx = e.touches[0].clientX - startX;
+      const dy = Math.abs(e.touches[0].clientY - startY);
+      if (dy > 40) return; // Ignore vertical scrolls
+      if (!isOpen && startX < window.innerWidth - 40) return; // Only open from right edge
+      if (Math.abs(dx) > 30) touchMoved = true;
+      // Swipe right to close
+      if (isOpen && dx > 60) {
+        setIsOpen(false);
+        isSwiping = false;
+      }
+      // Swipe left to open (from right edge)
+      if (!isOpen && startX > window.innerWidth - 40 && dx < -60) {
+        setIsOpen(true);
+        isSwiping = false;
+      }
+    };
+    const handleTouchEnd = () => {
+      isSwiping = false;
+      startX = null;
+      startY = null;
+    };
+    // Attach to panel for close, to window for open
+    const panel = panelRef.current;
+    if (panel) {
+      panel.addEventListener("touchstart", handleTouchStart);
+      panel.addEventListener("touchmove", handleTouchMove);
+      panel.addEventListener("touchend", handleTouchEnd);
+    }
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchend", handleTouchEnd);
+    return () => {
+      if (panel) {
+        panel.removeEventListener("touchstart", handleTouchStart);
+        panel.removeEventListener("touchmove", handleTouchMove);
+        panel.removeEventListener("touchend", handleTouchEnd);
+      }
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [isOpen, setIsOpen, panelRef]);
+};
+
 const SignupPanel: React.FC<SignupPanelProps> = ({ isOpen, setIsOpen }) => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -20,6 +83,8 @@ const SignupPanel: React.FC<SignupPanelProps> = ({ isOpen, setIsOpen }) => {
   const formRef = useRef<HTMLFormElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const isMobile = window.innerWidth < 768;
+
+  useSwipePanel(isOpen, setIsOpen, panelRef);
 
   // Load panel width from localStorage
   useEffect(() => {

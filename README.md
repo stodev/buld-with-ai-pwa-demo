@@ -2,49 +2,62 @@
 
 ## 1. Project Overview
 
-This project was created as a demo website for an Internal Hackathon Week. Its purpose is to show how a designer, a native HTML/CSS developer, or a backend specialist without deep front-end experience can use AI tools to build a complete working front-end product from scratch.
+This project was created as a demo website for an **Internal Hackathon Week**. The concept was developed entirely from scratch – not by modifying an existing template, but by leveraging a wide range of **AI tools** at each stage of the creative and development process. The initiative was led by a **designer with native HTML/CSS front-end experience**, aiming to demonstrate how **non-technical team members** or **backend developers with limited frontend knowledge** can still create **fully functional PWA web apps** using modern AI tooling.
 
-The process is intentionally focused on non-frontend professionals, aiming to:
+The objective was to simulate a **full-stack experience**: from a simple email brief for an internal event, to a working product with a dynamic UI and core interactions.
 
-- Explore an AI-powered workflow from concept to deployed PWA using no-code, low-code, and hybrid-code tools.
-- Rapidly prototype and iterate using real UI components.
-- Combine clean HTML/CSS foundations with modern JavaScript frameworks.
-- Evaluate how quickly and efficiently a functional app can be built using current AI-assisted tooling.
+## 2. Key Demo Highlights
 
-## 2. AI Tools and Workflow
+- **No pre-made templates were used.** The entire site was built from scratch using AI-assisted tools at every step of the pipeline.
+- **Full-stack simulation**: From concept and structure to layout, interactivity, and deployment – all done by a non-frontend specialist.
+- **AI-assisted design system**: Sitemap, wireframes, and style guidelines generated in **Relume**, refined in **Figma**, and translated into interactive prototypes in **Builder.io**.
+- **Responsive layout with modern UI elements**:
+  - A **resizable sidebar panel** that maintains state in **localStorage** and supports **swipe gestures on mobile**.
+  - A **modal popup** that can be **repositioned via drag & drop**.
+  - **Micro animations** and **intro transitions** for a polished user experience.
+- **Iterative development** in **Visual Studio Code** using **GitHub Copilot** for refactoring, bug fixes, and semantic styling.
+- **Live deployment** through **Vercel**, with automatic updates triggered by each commit to GitHub.
 
-- ChatGPT and Claude: Used for research, ideation, and identifying useful tools and component strategies.
-- Relume: Created sitemap, wireframes, and style guidelines through prompting. Exported to Figma for further refinement.
-- Builder.io: Used to build an HTML-ready interactive prototype based on Figma and Relume output.
-- Lovable (Builder.io-based generator): Created the actual PWA using prompt-driven generation. Implemented a resizable SidePanel (with localStorage state), modal window, and other demo functionality.
-- Visual Studio Code + GitHub Copilot: Used for refinement, styling (semantic + Tailwind), animations, debugging, and enhancement.
-- Vercel: Connected for live hosting with automatic deployment on GitHub commits.
+## 3. AI Tools and Workflow
 
-## 3. Tech Stack
+- **ChatGPT and Claude**: Used for research, ideation, and identifying useful AI tools and components.
+- **Relume**: Generated sitemap, wireframes, and style guide via prompts; exported to Figma for design continuity.
+- **Builder.io**: Exported interactive, HTML-ready design based on Figma and Relume outputs.
+- **Lovable (Builder.io tool)**: Generated the actual PWA with prompt-driven components and site structure. Implemented features like a resizable SidePanel (with persistent localStorage state), Modal for additional info, and more.
+- **Visual Studio Code + GitHub Copilot**: Used for further development, hybrid semantic + Tailwind styling, animations, bug fixing, and improvements.
+- **Vercel**: Used for external hosting and auto-deployment from GitHub on every commit.
 
-- React + TypeScript
-- Vite
-- Tailwind CSS (with some native CSS modules)
-- Node.js-based tooling (Node.js v18 or higher recommended)
+## 4. Tech Stack
 
-## 4. How to Run Locally
+- **React** + **TypeScript**
+- **Vite**
+- **Tailwind CSS** (alongside native CSS modules)
+- **Node.js-based tooling** (Node.js >= 18 recommended)
 
-1. Clone the repository:
+## 5. How to Run Locally
+
+1. **Clone the repository:**
+   ```sh
    git clone https://github.com/stodev/buld-with-ai-pwa-demo.git
    cd buld-with-ai-pwa-demo
+   ```
 
-2. Install dependencies:
+2. **Install dependencies:**
+   ```sh
    npm install
+   ```
 
-3. Start the development server:
+3. **Start the development server:**
+   ```sh
    npm run dev
+   ```
 
-4. Optional: Ensure Node.js version 18 or higher is used. Tested with Node.js v20.11.0.
+4. *(Optional)* Ensure you are using **Node.js version 18 or higher** for best compatibility. **Tested on 20.11.0**
 
-## 5. Live Demo
+## 6. Live Demo
 
-https://buld-with-ai-pwa-demo.vercel.app/
+[https://buld-with-ai-pwa-demo.vercel.app/](https://buld-with-ai-pwa-demo.vercel.app/)
 
 ---
 
-This project is a proof-of-concept for rapid, AI-assisted web development and is not intended as a production-ready frontend codebase.
+*This project is an experimental showcase designed to explore rapid, AI-assisted web development workflows. It is not optimized or intended for production use.*

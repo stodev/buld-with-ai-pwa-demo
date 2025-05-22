@@ -1,8 +1,8 @@
 import React from "react";
-import CheckIcon from "../ui/CheckIcon";
 import { ChevronRight } from "lucide-react";
 import { useLearnMoreModal } from "@/contexts/LearnMoreContext";
 import { useSignupPanel } from "@/contexts/SignupPanelContext";
+import BulletIcon from "@/components/ui/BulletIcon";
 
 const SubmissionSection: React.FC = () => {
   const { openModal } = useLearnMoreModal();
@@ -18,10 +18,10 @@ const SubmissionSection: React.FC = () => {
             To successfully participate, ensure your submission includes a ZIP file containing your project repository along with a detailed document. This document should outline the problem your project addresses, its functionality, and the AI tools utilized.
           </p>
           <div className="section-list">
-            <div className="section-list-item"><CheckIcon />ZIP file with your project repository (code, README, assets)</div>
-            <div className="section-list-item"><CheckIcon />1–2 page document explaining your project</div>
-            <div className="section-list-item"><CheckIcon />Short screen-recorded demo video</div>
-            <div className="section-list-item"><CheckIcon />Live deployment URL</div>
+            <div className="section-list-item"><BulletIcon size={20} />ZIP file with your project repository (code, README, assets)</div>
+            <div className="section-list-item"><BulletIcon size={20} />1–2 page document explaining your project</div>
+            <div className="section-list-item"><BulletIcon size={20} />Short screen-recorded demo video</div>
+            <div className="section-list-item"><BulletIcon size={20} />Live deployment URL</div>
           </div>
           <div className="section-actions">
             <button className="section-btn section-btn--white" onClick={openModal}>Learn More</button>
