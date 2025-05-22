@@ -81,7 +81,7 @@ const LearnMoreModal: React.FC<LearnMoreModalProps> = ({ isOpen, onClose }) => {
           </DialogClose>
         </DialogHeader>
 
-        <div className="p-6">
+        <div className="p-6 dialog-scrollable-content overflow-y-auto max-h-[80vh]">
           <DialogDescription className="text-base text-[--text-cold-dark]">            
               <div className="space-y-7">
                 <p className="leading-relaxed">
