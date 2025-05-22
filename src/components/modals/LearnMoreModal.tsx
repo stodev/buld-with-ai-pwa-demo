@@ -60,7 +60,7 @@ const LearnMoreModal: React.FC<LearnMoreModalProps> = ({ isOpen, onClose }) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
         ref={modalRef}
-        className="bg-white p-0 overflow-hidden shadow-lg rounded-lg max-w-md w-full animate-slide-in-bottom border border-gray-200"
+        className="bg-white p-0 overflow-hidden shadow-lg rounded-lg max-w-2xl w-full animate-slide-in-bottom border border-gray-200"
         style={{
           left: `calc(50% + ${position.x}px)`,
           top: `calc(50% + ${position.y}px)`,
@@ -74,7 +74,7 @@ const LearnMoreModal: React.FC<LearnMoreModalProps> = ({ isOpen, onClose }) => {
           className="p-4 border-b flex justify-between items-center cursor-grab active:cursor-grabbing select-none"
           onMouseDown={handleHeaderMouseDown}
         >
-          <DialogTitle className="text-2xl font-semibold">Learn More</DialogTitle>
+          <DialogTitle className="text-2xl font-semibold">About This Demo</DialogTitle>
           <DialogClose className="absolute right-4 top-4 p-1 rounded-full hover:bg-gray-100 transition-colors">
             <X className="h-5 w-5" />
             <span className="sr-only">Close</span>
@@ -82,29 +82,44 @@ const LearnMoreModal: React.FC<LearnMoreModalProps> = ({ isOpen, onClose }) => {
         </DialogHeader>
 
         <div className="p-6">
-          <DialogDescription className="text-base">
-            <p className="mb-4">
-              Welcome to our AI Hackathon event! This is an opportunity for developers, designers, and AI enthusiasts to come together and build innovative solutions using artificial intelligence.
-            </p>
-
-            <h3 className="text-lg font-medium mb-2">Event Details</h3>
-            <p className="mb-4">
-              This hackathon runs for one week, during which participants can work individually or in teams to develop their projects. We provide mentorship, resources, and a collaborative environment to help you bring your ideas to life.
-            </p>
-
-            <h3 className="text-lg font-medium mb-2">Important Dates</h3>
-            <ul className="list-disc pl-5 mb-4">
-              <li>Registration Deadline: June 15, 2025</li>
-              <li>Kickoff Event: June 20, 2025</li>
-              <li>Project Submission: June 27, 2025</li>
-              <li>Winners Announcement: July 1, 2025</li>
-            </ul>
-
-            <div className="bg-yellow-50 p-3 rounded-md mt-4 text-sm">
-              <p>
-                <strong>Note:</strong> This is a demo website created for showcasing web development capabilities. The events and dates mentioned are fictional.
-              </p>
-            </div>
+          <DialogDescription className="text-base text-[--text-cold-dark]">            
+              <div className="space-y-7">
+                <p className="leading-relaxed">
+                  This site was built as part of an <strong>AI Hackathon demo</strong> to show how a
+                  <strong> non-frontend specialist</strong> – like a designer or backend developer – can create a
+                  fully working PWA using <strong>modern AI tools</strong>.
+                </p>
+                <p className="leading-relaxed">
+                  Instead of using a ready-made template, the entire site was created <strong>from scratch</strong>,
+                  based on an internal event brief sent via email. The process included:
+                </p>
+                <ul className="list-disc list-inside pl-2 text-base space-y-1">
+                  <li>
+                    AI-assisted wireframes and design systems via <strong>Relume + Figma</strong>
+                  </li>
+                  <li>
+                    Frontend layout with <strong>Builder.io + Lovable</strong>
+                  </li>
+                  <li>
+                    Code refinement and testing in <strong>VSCode + GitHub Copilot</strong>
+                  </li>
+                </ul>
+                <p className="leading-relaxed font-bold text-lg mt-6">Key features:</p>
+                <ul className="list-disc list-inside pl-2 text-base space-y-1">
+                  <li>Resizable sidebar with swipe gestures and persistent local storage</li>
+                  <li>Draggable popup modal with reposition support</li>
+                  <li>Micro animations and responsive layout</li>
+                  <li>
+                    End-to-end AI workflow: idea → design → code → <strong>live deployment</strong> via GitHub + Vercel
+                  </li>
+                </ul>
+                <div className="bg-yellow-50 p-3 rounded-md mt-4 text-sm">
+                  <p className="leading-relaxed">
+                    <strong>Note:</strong> This is not a production-ready product, but a <strong>proof-of-concept</strong> demonstrating how
+                    quickly modern AI tools can turn ideas into real, working web experiences.
+                  </p>
+                </div>
+              </div>
           </DialogDescription>
         </div>
       </DialogContent>

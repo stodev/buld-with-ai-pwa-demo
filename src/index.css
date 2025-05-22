@@ -6,6 +6,7 @@
   :root {
     --site-bgr: #fff;
     --main-text: #040809;
+    --text-cold-dark: #494f57;
     --accent-color: #52a8aa;
     --accent-color-hover: #286667;
 
@@ -30,6 +31,7 @@
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
+    
 
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
